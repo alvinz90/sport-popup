@@ -1,0 +1,27 @@
+<div class="loading-center" *ngIf="isLoading">
+  <h2>Loading...</h2>
+</div>
+<!--
+<p>
+    <span>Window inner width: {{actualWidth}}</span>
+</p>
+-->
+<mat-list>
+        <mat-list-item *ngFor="let item of items" (click)="onRowClicked(item)">
+          
+          <div id="container">
+            <div id="col_thumbnail">
+                  <img src="{{item.data.thumbnail ? item.data.thumbnail : '../img/image_not_found.jpg' }}" width="60" height="40" />           
+            </div>
+            <div id="col_space"></div>
+            <div id="col_title">
+              {{
+                  item.data.title 
+              }}
+            </div>
+      
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+        
+</mat-list>

@@ -1,0 +1,120 @@
+//@import "~@angular/material/dialog/dialog.scss";
+//@import '~material2-srcs/src/lib/core/theming/all-theme';
+
+//$mat-dialog-padding: 0;
+//$mat-dialog-border-radius: 0.5rem;
+//$background: #ffffff;
+/*
+@mixin mat-dialog-container {
+    padding: $mat-dialog-padding;
+    border-radius: $mat-dialog-border-radius;
+    background: $background;
+}
+
+@include mat-dialog-container;
+*/
+
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+  }  
+
+  #container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+  }
+  #col_thumbnail {
+    width: 10%;
+
+    display: table-cell;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: left;
+  }
+
+  #col_title {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: left;
+
+    margin-top: 15px;
+    margin-left: 15px;
+    color: white;
+
+  }
+
+  #col_space {
+    width: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: left;
+
+    margin-top: 15px;
+    margin-left: 15px;
+    color: white;
+  }
+  .col_change_positive {
+    width: 33%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+    
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    color: darkgreen;
+
+  }
+
+  .col_change_negative {
+    width: 33%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+    
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    color:red;
+
+  }
+
+/* Structure */
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+  .loading-center {
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+}
+

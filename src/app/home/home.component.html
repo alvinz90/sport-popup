@@ -1,0 +1,65 @@
+<div class="alternative2">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div mat-card-avatar class="accenture-logo "></div>
+      <span class="indent_title">Sport Popup Demo App</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon">home</mat-icon>
+  
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Sport Popup Demo</mat-card-title>
+      <mat-card-subtitle> <a href="mailto:alvin.zhu@accenture.com">alvin.zhu@accenture.com</a></mat-card-subtitle>
+    </mat-card-header>
+  
+    <!--
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    -->
+  
+    <mat-card-content>
+      <!--
+      <p>
+        <span>Window inner width: {{actualWidth}}</span>
+      </p>
+      -->
+      <p align="justify">
+        The Sport Popup Demo is a mini app (Angular 5 / Material) within a popup (Dialog) implementing the service - consumer data flow; 
+        it would call the Reddit service, retrieve sports news data, and render it as a item list for selecting; after the user selecting 
+        the sport news item, the page focus would come back to the home page with the selected sport news data, and render the page with the data details. 
+      </p>
+    </mat-card-content>
+  
+    <mat-card-actions class="center_button">
+      <button mat-raised-button color="accent" (click)="openPopupSports()">Get Sport News</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+  <mat-card class="details-card" *ngIf="sport">
+
+      <mat-card-header>
+          <div mat-card-avatar class="sport-image"></div>
+          <mat-card-title>{{sport.data.title}}</mat-card-title>
+          <mat-card-subtitle> {{sport.data.author}} </mat-card-subtitle>
+      </mat-card-header>
+
+      <div *ngIf="video_url;then show_video else show_thumbnail"></div>
+
+      <ng-template #show_video >
+        <iframe [src]='photoURL()' width="80%" class="video-center"  frameborder="0"
+          webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>        
+      </ng-template>
+      <ng-template #show_thumbnail >
+          <img src="{{sport.data.thumbnail}}" class="video-center" width="80%" height="240" />
+      </ng-template>
+
+      <mat-card-content class="view-reddit">
+          <a mat-raised-button color="accent" target="_blank" href="http://reddit.com/{{sport.data.permalink}}">View On Reddit</a>
+      </mat-card-content>
+
+  </mat-card>  
