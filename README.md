@@ -10,6 +10,8 @@ The Sport Popup Demo is a mini app (Angular 5 / Material) within a popup (Dialog
 
 * [Angular Material](https://material.angular.io/) - Angular Material Official site
 
+* [Firebase Console](https://console.firebase.google.com/) - Google Firebase Console
+
 * [Live Demo](https://sport-popup.firebaseapp.com/) - It's been deploy to Google Firebase website: https://sport-popup.firebaseapp.com/
 
 ### Desktop screenshots
