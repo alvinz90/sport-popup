@@ -223,4 +223,38 @@ This reference link below is very helpful:
 
 * [Firebase Deployment tutorial] (https://scotch.io/tutorials/deploying-an-angular-cli-app-to-production-with-firebase) follow the steps to make one of your own great website;-).
 
+Basic steps:
+
+* 1) Create a project @ https://console.firebase.google.com/ for example in this case: sport-popup-coreui
+* 2) Install the Firebase Tools (only need to install it once for your machine)
+```
+npm install -g firebase-tools
+```
+* 3) Login to Firebase
+```
+firebase login
+```
+* 4) link our local Angular app to our Firebase app
+```
+cd sport-popup
+firebase init
+```
+** 4.1)Select 'Hosting'
+** 4.2)Select the firebase project just created above
+** 4.3)input 'dist' as your public directory (this is the Angular build directory)
+** 4.4)set it as Single page app
+
+* 5) build the Angular app
+```
+ng build --prod
+```
+
+* 6) Deploy to Firebase
+```
+firebase deploy
+```
+* 7) Done & enjoy:
+
+https://sport-popup.firebaseapp.com/
+
 
